@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cjswls79</title>
+  <title>cjswls79 CV</title>
   <style>
     :root {
       --primary: #000000;
@@ -322,6 +322,26 @@
       line-height: 1;
     }
 
+    .placeholder-note {
+      margin: 18px 0 0;
+      color: var(--body);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .empty-slot {
+      min-height: 96px;
+      margin-top: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.34);
+    }
+
+    .research-card .empty-slot {
+      border-color: var(--dark-soft);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
     .code-panel {
       min-height: 100%;
       border-radius: 4px;
@@ -522,9 +542,9 @@
       <div class="container nav-inner">
         <a class="brand" href="#top">cjswls79</a>
         <div class="nav-links" aria-label="Sections">
-          <a href="#platform">Platform</a>
-          <a href="#research">Research</a>
-          <a href="#work">Work</a>
+          <a href="#profile">Profile</a>
+          <a href="#courses">Courses</a>
+          <a href="#activities">Projects</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="nav-actions">
@@ -536,24 +556,24 @@
         </button>
       </div>
       <div class="container mobile-drawer">
-        <a href="#platform">Platform</a>
-        <a href="#research">Research</a>
-        <a href="#work">Work</a>
+        <a href="#profile">Profile</a>
+        <a href="#courses">Courses</a>
+        <a href="#activities">Projects</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <div class="container hero-main">
       <div>
-        <p class="mono eyebrow">Personal cloud surface</p>
-        <h1>Building practical software with an AI-native edge.</h1>
+        <p class="mono eyebrow">Name section</p>
+        <h1>이름과 한 줄 소개</h1>
         <p class="lead">
-          A compact personal page shaped from the uploaded design system: dark-first,
-          technical, direct, and built around a single gradient signal.
+          여기에 이름, 소속, 전공, 관심 분야, 짧은 자기소개를 넣으면 됩니다.
+          오른쪽 비주얼은 유지하고, 이 왼쪽 영역을 CV의 표지처럼 사용합니다.
         </p>
         <div class="hero-actions">
-          <a class="button mint" href="#work">View work</a>
-          <a class="button white" href="#platform">Read profile</a>
+          <a class="button mint" href="#activities">Projects</a>
+          <a class="button white" href="#contact">Contact</a>
         </div>
       </div>
 
@@ -578,14 +598,14 @@
   </header>
 
   <main>
-    <section class="section" id="platform">
+    <section class="section" id="profile">
       <div class="container">
         <div class="section-head">
-          <p class="mono eyebrow">Platform</p>
-          <h2>A concise homepage system for experiments, notes, and shipped work.</h2>
+          <p class="mono eyebrow">Profile / Education</p>
+          <h2>이름 섹션 다음에는 학력, 관심 분야, 핵심 링크를 배치합니다.</h2>
           <p>
-            The page keeps the repository lightweight while giving the first screen
-            a more deliberate visual system than the default GitHub Pages starter.
+            이 흰색 밴드는 CV의 기본 정보 구역입니다. 카드마다 실제 내용을
+            짧게 넣고, 오른쪽 검은 패널에는 CV 요약 항목을 정리하면 됩니다.
           </p>
         </div>
 
@@ -593,125 +613,141 @@
           <div class="stats-grid">
             <article class="stat-card mint">
               <div>
-                <strong>01</strong>
-                <p class="mono">Static first</p>
+                <strong>학력</strong>
+                <p class="mono">Education</p>
               </div>
-              <p>No build pipeline is required; the page opens directly from GitHub Pages.</p>
+              <p class="placeholder-note">학교, 전공, 학위 과정, 재학 기간을 넣는 자리.</p>
+              <div class="empty-slot" aria-hidden="true"></div>
             </article>
             <article class="stat-card peach">
               <div>
-                <strong>04px</strong>
-                <p class="mono">Card radius</p>
+                <strong>관심</strong>
+                <p class="mono">Interests</p>
               </div>
-              <p>Small-radius surfaces mirror the uploaded brand system.</p>
+              <p class="placeholder-note">AI, 시스템, 보안, 데이터 등 연구/개발 관심 분야.</p>
+              <div class="empty-slot" aria-hidden="true"></div>
             </article>
             <article class="stat-card periwinkle">
               <div>
-                <strong>3</strong>
-                <p class="mono">Gradient stops</p>
+                <strong>링크</strong>
+                <p class="mono">Links</p>
               </div>
-              <p>Orange, magenta, and periwinkle stay together as one hero object.</p>
+              <p class="placeholder-note">GitHub, LinkedIn, email, portfolio PDF 링크.</p>
+              <div class="empty-slot" aria-hidden="true"></div>
             </article>
           </div>
 
-          <div class="code-panel" aria-label="Implementation preview">
-            <pre><span class="accent">const</span> page = {
-  surface: "dark / light / dark",
-  typography: ["display sans", "mono caps"],
-  chrome: "hairline borders",
-  deployment: "GitHub Pages",
-  status: "ready to iterate"
+          <div class="code-panel" aria-label="CV summary placeholder">
+            <pre><span class="accent">const</span> cv = {
+  name: "여기에 이름",
+  affiliation: "학교 / 연구실 / 소속",
+  focus: ["관심 분야 1", "관심 분야 2"],
+  skills: ["기술 스택", "언어", "도구"],
+  lookingFor: "인턴 / 연구 / 프로젝트 / 협업"
 };</pre>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section dark-band" id="research">
+    <section class="section dark-band" id="courses">
       <div class="container">
         <div class="section-head">
-          <p class="mono eyebrow">Research</p>
-          <h2>Grounded in a small set of repeatable rules.</h2>
+          <p class="mono eyebrow">Courses</p>
+          <h2>수강 과목(course) 섹션은 어두운 카드 그리드에 넣습니다.</h2>
           <p>
-            The visual language stays restrained: one dark canvas, one light canvas,
-            a single soft hairline, and no extra accent colors.
+            과목 목록은 길어질 수 있으므로 네 개의 묶음으로 나누면 읽기 쉽습니다.
+            각 카드 안의 빈 영역에 과목명, 학기, 주요 프로젝트를 넣으면 됩니다.
           </p>
         </div>
 
         <div class="research-grid">
           <article class="research-card">
-            <p class="mono eyebrow">Surface</p>
-            <h3>Dark bands create the page rhythm.</h3>
-            <p>Hero and research sections use near-black navy so content changes feel structural.</p>
+            <p class="mono eyebrow">Core CS</p>
+            <h3>전공 핵심 과목</h3>
+            <p>자료구조, 알고리즘, 운영체제, 컴퓨터구조 같은 핵심 과목.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
           <article class="research-card">
-            <p class="mono eyebrow">Type</p>
-            <h3>Display text stays sentence-case.</h3>
-            <p>Labels use uppercase mono; paragraphs and headlines stay readable and direct.</p>
+            <p class="mono eyebrow">AI / Data</p>
+            <h3>AI와 데이터 과목</h3>
+            <p>머신러닝, 딥러닝, 데이터마이닝, NLP, 컴퓨터비전 등.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
           <article class="research-card">
-            <p class="mono eyebrow">Chrome</p>
-            <h3>Hairlines replace heavy shadows.</h3>
-            <p>Cards sit flat on the canvas with crisp borders and compact internal spacing.</p>
+            <p class="mono eyebrow">Math / Theory</p>
+            <h3>수학과 이론 과목</h3>
+            <p>선형대수, 확률, 통계, 최적화, 이산수학 등을 넣는 자리.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
           <article class="research-card">
-            <p class="mono eyebrow">Signal</p>
-            <h3>The ribbon carries the decoration.</h3>
-            <p>The gradient appears once at hero scale instead of becoming scattered UI color.</p>
+            <p class="mono eyebrow">Selected</p>
+            <h3>기타 주요 수강 과목</h3>
+            <p>강조하고 싶은 교양, 세미나, 온라인 코스, 연구 과목.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="work">
+    <section class="section" id="activities">
       <div class="container">
         <div class="section-head">
-          <p class="mono eyebrow">Work</p>
-          <h2>Current page modules.</h2>
+          <p class="mono eyebrow">Projects / Activities</p>
+          <h2>개인 프로젝트, 대회, 콘텐츠, 취미는 이 흰색 섹션에 모읍니다.</h2>
           <p>
-            Each module is plain HTML and CSS, designed to be easy to edit without
-            adding a framework or package manager to the repository.
+            CV에서 가장 자주 업데이트되는 항목입니다. 카드에는 대표 사례를 넣고,
+            아래 표에는 더 긴 활동 목록을 정리하는 방식으로 쓰면 됩니다.
           </p>
         </div>
 
         <div class="work-grid">
           <article class="work-card">
-            <p class="mono eyebrow">Hero</p>
-            <h3>Dark entry with split layout.</h3>
-            <p>The first viewport pairs a direct identity statement with the brand ribbon graphic.</p>
+            <p class="mono eyebrow">Personal Project</p>
+            <h3>개인 프로젝트 섹션</h3>
+            <p>프로젝트 이름, 역할, 사용 기술, 데모/깃허브 링크를 넣는 자리.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
           <article class="work-card">
-            <p class="mono eyebrow">System</p>
-            <h3>Token-driven sections.</h3>
-            <p>Colors, spacing, cards, buttons, and grid behavior are centralized in CSS variables.</p>
+            <p class="mono eyebrow">Competition</p>
+            <h3>대회와 수상 섹션</h3>
+            <p>대회명, 순위, 날짜, 팀 역할, 결과 링크를 넣는 자리.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
           <article class="work-card">
-            <p class="mono eyebrow">Responsive</p>
-            <h3>Stacked mobile flow.</h3>
-            <p>Navigation collapses into a drawer and all grids become one-column on small screens.</p>
+            <p class="mono eyebrow">Content</p>
+            <h3>콘텐츠와 글 섹션</h3>
+            <p>블로그 글, 발표 자료, 튜토리얼, 문서화 작업을 넣는 자리.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
+          </article>
+          <article class="work-card">
+            <p class="mono eyebrow">Hobbies</p>
+            <h3>취미와 개인 관심사 섹션</h3>
+            <p>사람이 보이는 CV를 위해 취미, 커뮤니티, 사이드 활동을 넣는 자리.</p>
+            <div class="empty-slot" aria-hidden="true"></div>
           </article>
         </div>
 
         <div class="table-card" style="margin-top: 32px;">
           <div class="table-row header mono">
-            <span>Module</span>
-            <span>Surface</span>
-            <span>Status</span>
+            <span>Section</span>
+            <span>Use this space for</span>
+            <span>Placement</span>
           </div>
           <div class="table-row">
-            <strong>Hero ribbon</strong>
-            <span>Canvas dark</span>
-            <span>Implemented</span>
+            <strong>Experience / Research</strong>
+            <span>인턴, 연구실, 조교, 업무 경험</span>
+            <span>필요하면 이 표 아래에 새 카드로 확장</span>
           </div>
           <div class="table-row">
-            <strong>Stats tiles</strong>
-            <span>Accent tints</span>
-            <span>Implemented</span>
+            <strong>Awards / Competition</strong>
+            <span>대회, 수상, 장학금, 인증</span>
+            <span>Competition 카드 또는 표 행</span>
           </div>
           <div class="table-row">
-            <strong>Footer wordmark</strong>
-            <span>Canvas light</span>
-            <span>Implemented</span>
+            <strong>Content / Hobbies</strong>
+            <span>글, 발표, 취미, 커뮤니티 활동</span>
+            <span>하단 카드 영역</span>
           </div>
         </div>
       </div>
@@ -722,20 +758,21 @@
     <div class="container footer-grid">
       <div>
         <p class="mono eyebrow">Contact</p>
-        <h2>Start with the repository.</h2>
-        <p>This page is intentionally small, reviewable, and ready for GitHub Pages.</p>
-        <a class="button primary" href="https://github.com/cjswls79">Open GitHub</a>
+        <h2>연락처 섹션은 마지막에 고정합니다.</h2>
+        <p>email, GitHub, LinkedIn, CV PDF, Google Scholar 같은 외부 링크를 넣는 자리.</p>
+        <a class="button primary" href="https://github.com/cjswls79">GitHub</a>
       </div>
       <div class="footer-links">
         <p class="mono eyebrow">Sections</p>
-        <a href="#platform">Platform</a>
-        <a href="#research">Research</a>
-        <a href="#work">Work</a>
+        <a href="#profile">Profile</a>
+        <a href="#courses">Courses</a>
+        <a href="#activities">Projects</a>
       </div>
       <div class="footer-links">
-        <p class="mono eyebrow">System</p>
-        <a href="DESIGN.md">Design.md</a>
-        <a href="README.md">Readme</a>
+        <p class="mono eyebrow">CV Links</p>
+        <a href="#">Email placeholder</a>
+        <a href="#">LinkedIn placeholder</a>
+        <a href="#">CV PDF placeholder</a>
       </div>
       <div class="footer-links">
         <p class="mono eyebrow">Source</p>
