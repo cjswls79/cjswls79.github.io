@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cjswls79 CV</title>
+  <title>JoonSeo Chang | CV</title>
   <style>
     :root {
-      --primary: #000000;
+      --primary: #ff5a1f;
+      --primary-deep: #c93f12;
+      --sun-700: #ff8a1c;
+      --sun-500: #ffc247;
+      --yellow: #ffe45c;
+      --cream: #fff2c7;
+      --cream-soft: #fff8e4;
+      --cream-deep: #f5df9d;
       --canvas: #ffffff;
-      --canvas-dark: #010120;
-      --hairline: #ebebeb;
-      --dark-soft: #313641;
-      --body: #777777;
-      --mint: #c8f6f9;
-      --orange: #fc4c02;
-      --magenta: #ef2cc1;
-      --periwinkle: #bdbbff;
-      --peach: #ffd7c2;
+      --surface: #f8f8f5;
+      --ink: #17130f;
+      --charcoal: #39332d;
+      --slate: #706a62;
+      --stone: #958d82;
+      --hairline: #e6dfd2;
+      --hairline-soft: #eee7db;
+      --code: #17130f;
       --max: 1280px;
     }
 
@@ -31,10 +37,10 @@
     body {
       margin: 0;
       background: var(--canvas);
-      color: var(--primary);
+      color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 16px;
-      line-height: 1.3;
+      line-height: 1.55;
     }
 
     a {
@@ -42,39 +48,58 @@
       text-decoration: none;
     }
 
-    .mono {
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
     .container {
       width: min(100% - 64px, var(--max));
       margin: 0 auto;
     }
 
-    .hero {
-      min-height: 92vh;
-      background: var(--canvas-dark);
+    .display {
+      font-family: "Times New Roman", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -1px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--stone);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .promo {
+      background: var(--ink);
       color: var(--canvas);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .promo-inner {
+      min-height: 42px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .promo a {
+      color: var(--sun-500);
+      font-weight: 600;
     }
 
     .nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(1, 1, 32, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--hairline-soft);
     }
 
     .nav-inner {
-      min-height: 72px;
+      min-height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -82,9 +107,24 @@
     }
 
     .brand {
-      font-size: 22px;
-      font-weight: 500;
-      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .mark {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: 20px;
+      line-height: 1;
     }
 
     .nav-links,
@@ -95,24 +135,22 @@
     }
 
     .nav-links a {
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 15px;
+      color: var(--charcoal);
+      font-size: 14px;
+      font-weight: 500;
     }
 
     .button {
       display: inline-flex;
+      min-height: 42px;
       align-items: center;
       justify-content: center;
-      min-height: 36px;
-      padding: 8px 24px;
+      padding: 10px 20px;
       border: 1px solid transparent;
-      border-radius: 4px;
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      border-radius: 8px;
       font-size: 14px;
       font-weight: 600;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: 0;
+      line-height: 1.3;
       cursor: pointer;
     }
 
@@ -121,19 +159,15 @@
       color: var(--canvas);
     }
 
-    .button.white {
-      background: var(--canvas);
-      color: var(--primary);
-    }
-
-    .button.mint {
-      background: var(--mint);
-      color: var(--primary);
-    }
-
-    .button.ghost {
-      background: var(--dark-soft);
+    .button.dark {
+      background: var(--ink);
       color: var(--canvas);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.64);
+      border-color: rgba(23, 19, 15, 0.26);
+      color: var(--ink);
     }
 
     .menu-button {
@@ -142,10 +176,10 @@
       height: 44px;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 4px;
-      background: transparent;
-      color: var(--canvas);
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+      background: var(--canvas);
+      color: var(--ink);
       cursor: pointer;
     }
 
@@ -169,34 +203,44 @@
 
     .mobile-drawer {
       display: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid var(--hairline-soft);
       padding: 16px 0 24px;
     }
 
     .mobile-drawer a {
       display: block;
-      padding: 14px 0;
-      color: var(--canvas);
+      padding: 12px 0;
+      color: var(--ink);
       font-size: 20px;
+      font-weight: 500;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 76% 28%, rgba(255, 226, 92, 0.8), transparent 28%),
+        linear-gradient(135deg, #fff8e1 0%, #ffd284 42%, #ff8a1c 72%, #e9511f 100%);
+    }
+
+    .hero::after {
+      position: absolute;
+      inset: auto 0 0;
+      height: 22%;
+      background: linear-gradient(180deg, transparent, rgba(23, 19, 15, 0.12));
+      content: "";
+      pointer-events: none;
     }
 
     .hero-main {
-      flex: 1;
+      position: relative;
+      z-index: 1;
+      min-height: calc(100vh - 106px);
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
+      grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.85fr);
       align-items: center;
-      gap: 48px;
-      padding: 80px 0 88px;
-    }
-
-    .eyebrow {
-      color: var(--body);
-      margin: 0 0 20px;
-    }
-
-    .hero .eyebrow,
-    .dark-band .eyebrow {
-      color: rgba(255, 255, 255, 0.58);
+      gap: 56px;
+      padding: 96px 0;
     }
 
     h1,
@@ -207,268 +251,229 @@
     }
 
     h1 {
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 24px;
-      font-size: clamp(44px, 7vw, 76px);
-      font-weight: 500;
-      line-height: 1.04;
+      color: var(--ink);
+      font-size: clamp(58px, 7vw, 96px);
+      line-height: 1.02;
     }
 
     h2 {
-      margin-bottom: 16px;
-      font-size: clamp(34px, 4.2vw, 52px);
-      font-weight: 500;
-      line-height: 1.12;
+      margin-bottom: 18px;
+      font-size: clamp(40px, 5vw, 66px);
+      line-height: 1.08;
     }
 
     h3 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-size: 24px;
-      font-weight: 500;
-      line-height: 1.15;
+      font-weight: 600;
+      line-height: 1.25;
     }
 
     .lead {
       max-width: 620px;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 20px;
-      line-height: 1.35;
+      color: var(--charcoal);
+      font-size: 19px;
+      line-height: 1.55;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
-    .ribbon-wrap {
-      min-height: 520px;
-      display: grid;
-      place-items: center;
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 640px;
+      border: 1px solid rgba(23, 19, 15, 0.14);
+      border-radius: 12px;
+      background: var(--cream);
+      box-shadow: rgba(0, 0, 0, 0.08) 0 16px 42px -16px;
     }
 
-    .ribbon {
-      width: min(100%, 580px);
-      height: auto;
-      filter: drop-shadow(0 32px 70px rgba(239, 44, 193, 0.22));
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 640px;
+      display: block;
+      object-fit: cover;
+      object-position: 36% 76%;
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 8px;
+      background: rgba(23, 19, 15, 0.72);
+      color: var(--canvas);
+      font-size: 13px;
+      backdrop-filter: blur(12px);
     }
 
     .section {
-      padding: 80px 0;
+      padding: 96px 0;
+    }
+
+    .section.cream {
+      background: var(--cream-soft);
     }
 
     .section-head {
-      max-width: 680px;
-      margin-bottom: 44px;
+      max-width: 760px;
+      margin-bottom: 42px;
     }
 
     .section-head p {
-      color: var(--body);
+      max-width: 680px;
+      color: var(--slate);
       font-size: 18px;
-      line-height: 1.45;
     }
 
-    .platform-grid {
+    .card-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 32px;
-      align-items: stretch;
-    }
-
-    .stats-grid,
-    .research-grid,
-    .work-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .stats-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .stat-card,
-    .work-card,
-    .research-card {
-      border-radius: 4px;
-      padding: 24px;
+    .card-grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .stat-card {
-      min-height: 190px;
+    .card {
+      min-height: 250px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      color: var(--primary);
+      border: 1px solid var(--hairline-soft);
+      border-radius: 12px;
+      background: var(--canvas);
+      padding: 28px;
+      box-shadow: rgba(0, 0, 0, 0.04) 0 4px 12px;
     }
 
-    .stat-card.mint {
-      background: var(--mint);
+    .card.cream {
+      border-color: var(--hairline);
+      background: var(--cream);
+      box-shadow: none;
     }
 
-    .stat-card.peach {
-      background: var(--peach);
+    .card p {
+      color: var(--slate);
     }
 
-    .stat-card.periwinkle {
-      background: var(--periwinkle);
-    }
-
-    .stat-card strong {
-      display: block;
-      margin-bottom: 14px;
-      font-size: 44px;
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    .placeholder-note {
-      margin: 18px 0 0;
-      color: var(--body);
-      font-size: 15px;
-      line-height: 1.45;
-    }
-
-    .empty-slot {
-      min-height: 96px;
-      margin-top: 18px;
-      border: 1px solid rgba(0, 0, 0, 0.14);
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.34);
-    }
-
-    .research-card .empty-slot {
-      border-color: var(--dark-soft);
-      background: rgba(255, 255, 255, 0.03);
+    .slot {
+      min-height: 112px;
+      margin-top: 22px;
+      border: 1px dashed rgba(23, 19, 15, 0.22);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.42);
     }
 
     .code-panel {
-      min-height: 100%;
-      border-radius: 4px;
-      background: var(--canvas-dark);
-      color: var(--canvas);
-      padding: 24px;
-      overflow: hidden;
+      border-radius: 12px;
+      background: var(--code);
+      color: rgba(255, 255, 255, 0.82);
+      padding: 28px;
+      box-shadow: rgba(0, 0, 0, 0.08) 0 12px 24px -4px;
     }
 
     .code-panel pre {
       margin: 0;
       white-space: pre-wrap;
-      color: rgba(255, 255, 255, 0.8);
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      line-height: 1.55;
+      font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .code-panel .accent {
-      color: var(--mint);
+      color: var(--sun-500);
     }
 
-    .dark-band {
-      background: var(--canvas-dark);
-      color: var(--canvas);
-    }
-
-    .dark-band .section-head p {
-      color: rgba(255, 255, 255, 0.68);
-    }
-
-    .research-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .research-card {
-      min-height: 260px;
-      border: 1px solid var(--dark-soft);
-      background: var(--canvas-dark);
-    }
-
-    .research-card p {
-      color: rgba(255, 255, 255, 0.66);
-      line-height: 1.45;
-    }
-
-    .work-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .work-card {
-      border: 1px solid var(--hairline);
-      background: var(--canvas);
-    }
-
-    .work-card p {
-      color: var(--body);
-      line-height: 1.45;
-    }
-
-    .table-card {
-      border: 1px solid var(--hairline);
-      border-radius: 4px;
+    .timeline {
+      border: 1px solid var(--hairline-soft);
+      border-radius: 12px;
       overflow: hidden;
       background: var(--canvas);
     }
 
-    .table-row {
+    .row {
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 16px;
-      padding: 16px;
-      border-bottom: 1px solid var(--hairline);
+      grid-template-columns: 1fr 1.2fr 0.8fr;
+      gap: 18px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--hairline-soft);
       align-items: center;
     }
 
-    .table-row:last-child {
+    .row:last-child {
       border-bottom: 0;
     }
 
-    .table-row.header {
-      background: var(--hairline);
-      color: var(--body);
+    .row.header {
+      background: var(--cream);
+      color: var(--stone);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    .table-row strong {
-      font-weight: 500;
+    .row strong {
+      font-weight: 650;
+    }
+
+    .sunset-stripe {
+      height: 76px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--sun-700) 35%, var(--sun-500) 62%, var(--yellow) 82%, var(--cream) 100%);
     }
 
     .footer {
-      padding: 80px 0 0;
-      background: var(--canvas);
-      color: var(--primary);
-      border-top: 1px solid var(--hairline);
+      background: var(--cream);
+      padding: 64px 0 28px;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1.6fr repeat(3, 1fr);
       gap: 32px;
-      padding-bottom: 64px;
+      margin-bottom: 56px;
     }
 
-    .footer p,
-    .footer a {
-      color: var(--body);
+    .footer a,
+    .footer p {
+      color: var(--slate);
     }
 
     .footer-links {
       display: grid;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .wordmark {
-      width: 100%;
-      overflow: hidden;
-      color: var(--hairline);
-      font-size: clamp(72px, 16vw, 232px);
-      font-weight: 500;
-      line-height: 0.82;
-      white-space: nowrap;
-      user-select: none;
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 24px;
+      color: var(--stone);
+      font-size: 13px;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1023px) {
       .container {
         width: min(100% - 32px, var(--max));
+      }
+
+      .promo {
+        display: none;
       }
 
       .nav-links,
@@ -485,302 +490,311 @@
       }
 
       .hero-main {
+        min-height: auto;
         grid-template-columns: 1fr;
         padding: 48px 0 72px;
       }
 
-      .ribbon-wrap {
-        order: -1;
-        min-height: 300px;
+      .photo-card {
+        min-height: 520px;
       }
 
-      .platform-grid,
-      .stats-grid,
-      .research-grid,
-      .work-grid,
+      .photo-card img {
+        min-height: 520px;
+      }
+
+      .card-grid,
+      .card-grid.two,
       .footer-grid {
         grid-template-columns: 1fr;
       }
 
-      .research-card,
-      .stat-card {
-        min-height: auto;
+      .row {
+        grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 640px) {
-      .section {
-        padding: 64px 0;
+    @media (max-width: 560px) {
+      h1 {
+        font-size: 48px;
       }
 
-      .hero {
-        min-height: auto;
+      h2 {
+        font-size: 38px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .photo-card,
+      .photo-card img {
+        min-height: 430px;
       }
 
       .button {
-        min-height: 44px;
         width: 100%;
+        min-height: 44px;
       }
 
       .hero-actions {
         width: 100%;
       }
 
-      .table-card {
-        overflow-x: auto;
-      }
-
-      .table-row {
-        min-width: 560px;
+      .footer-bottom {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <header class="hero" id="top">
-    <nav class="nav" aria-label="Primary navigation">
-      <div class="container nav-inner">
-        <a class="brand" href="#top">cjswls79</a>
-        <div class="nav-links" aria-label="Sections">
-          <a href="#profile">Profile</a>
-          <a href="#courses">Courses</a>
-          <a href="#activities">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="nav-actions">
-          <a class="button ghost" href="https://github.com/cjswls79">GitHub</a>
-          <a class="button white" href="#contact">Contact</a>
-        </div>
-        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="container mobile-drawer">
+  <div class="promo">
+    <div class="container promo-inner">
+      <span>Personal CV template for JoonSeo Chang</span>
+      <a href="#contact">Contact section</a>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="JoonSeo Chang home">
+        <span class="mark">J</span>
+        <span>JoonSeo Chang</span>
+      </a>
+      <div class="nav-links" aria-label="Sections">
         <a href="#profile">Profile</a>
         <a href="#courses">Courses</a>
-        <a href="#activities">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-    </nav>
+      <div class="nav-actions">
+        <a class="button secondary" href="https://github.com/cjswls79">GitHub</a>
+        <a class="button dark" href="#contact">Contact</a>
+      </div>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="container mobile-drawer">
+      <a href="#profile">Profile</a>
+      <a href="#courses">Courses</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
+  <header class="hero" id="top">
     <div class="container hero-main">
       <div>
-        <p class="mono eyebrow">Name section</p>
-        <h1>이름과 한 줄 소개</h1>
+        <p class="eyebrow">Name section</p>
+        <h1 class="display">JoonSeo Chang</h1>
         <p class="lead">
-          여기에 이름, 소속, 전공, 관심 분야, 짧은 자기소개를 넣으면 됩니다.
-          오른쪽 비주얼은 유지하고, 이 왼쪽 영역을 CV의 표지처럼 사용합니다.
+          One-line introduction placeholder. Use this area for affiliation,
+          major, research interests, and the shortest version of the CV story.
         </p>
         <div class="hero-actions">
-          <a class="button mint" href="#activities">Projects</a>
-          <a class="button white" href="#contact">Contact</a>
+          <a class="button dark" href="#projects">Projects</a>
+          <a class="button secondary" href="#profile">Profile</a>
         </div>
       </div>
 
-      <div class="ribbon-wrap" aria-hidden="true">
-        <svg class="ribbon" viewBox="0 0 640 560" role="img">
-          <defs>
-            <linearGradient id="brandGradient" x1="56" x2="584" y1="108" y2="454" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#fc4c02"/>
-              <stop offset="0.52" stop-color="#ef2cc1"/>
-              <stop offset="1" stop-color="#bdbbff"/>
-            </linearGradient>
-            <filter id="soften" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="0.2"/>
-            </filter>
-          </defs>
-          <path d="M138 420C72 354 82 238 158 172c91-79 250-92 345-25 79 56 78 167 14 229-84 81-257 87-346 20" fill="none" stroke="url(#brandGradient)" stroke-width="54" stroke-linecap="round" filter="url(#soften)"/>
-          <path d="M208 350c-44-43-36-109 18-145 67-44 177-40 232 9 42 38 34 96-16 130-62 42-178 43-234 6" fill="none" stroke="url(#brandGradient)" stroke-width="36" stroke-linecap="round" opacity="0.82"/>
-          <path d="M258 274c26-42 112-56 162-22 35 24 31 67-8 87-45 23-123 13-154-24-10-13-10-27 0-41Z" fill="url(#brandGradient)" opacity="0.78"/>
-        </svg>
-      </div>
+      <figure class="photo-card">
+        <img src="intro-photo.jpg" alt="Intro photo for JoonSeo Chang">
+        <figcaption class="photo-caption">
+          Intro photo slot. Replace or crop this image later if a formal portrait is preferred.
+        </figcaption>
+      </figure>
     </div>
   </header>
 
   <main>
-    <section class="section" id="profile">
+    <section class="section cream" id="profile">
       <div class="container">
         <div class="section-head">
-          <p class="mono eyebrow">Profile / Education</p>
-          <h2>이름 섹션 다음에는 학력, 관심 분야, 핵심 링크를 배치합니다.</h2>
-          <p>
-            이 흰색 밴드는 CV의 기본 정보 구역입니다. 카드마다 실제 내용을
-            짧게 넣고, 오른쪽 검은 패널에는 CV 요약 항목을 정리하면 됩니다.
-          </p>
+          <p class="eyebrow">Profile / Education</p>
+          <h2 class="display">Where basic CV identity goes.</h2>
+          <p>Keep this band for the most stable information: education, interests, links, and a compact summary.</p>
         </div>
 
-        <div class="platform-grid">
-          <div class="stats-grid">
-            <article class="stat-card mint">
-              <div>
-                <strong>학력</strong>
-                <p class="mono">Education</p>
-              </div>
-              <p class="placeholder-note">학교, 전공, 학위 과정, 재학 기간을 넣는 자리.</p>
-              <div class="empty-slot" aria-hidden="true"></div>
-            </article>
-            <article class="stat-card peach">
-              <div>
-                <strong>관심</strong>
-                <p class="mono">Interests</p>
-              </div>
-              <p class="placeholder-note">AI, 시스템, 보안, 데이터 등 연구/개발 관심 분야.</p>
-              <div class="empty-slot" aria-hidden="true"></div>
-            </article>
-            <article class="stat-card periwinkle">
-              <div>
-                <strong>링크</strong>
-                <p class="mono">Links</p>
-              </div>
-              <p class="placeholder-note">GitHub, LinkedIn, email, portfolio PDF 링크.</p>
-              <div class="empty-slot" aria-hidden="true"></div>
-            </article>
-          </div>
+        <div class="card-grid">
+          <article class="card cream">
+            <div>
+              <p class="eyebrow">Education</p>
+              <h3>Education section</h3>
+              <p>School, degree, major, dates.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
+          </article>
+          <article class="card cream">
+            <div>
+              <p class="eyebrow">Interests</p>
+              <h3>Research interests section</h3>
+              <p>AI, systems, data, security, theory, or other focus areas.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
+          </article>
+          <article class="card cream">
+            <div>
+              <p class="eyebrow">Links</p>
+              <h3>Primary links section</h3>
+              <p>GitHub, LinkedIn, email, CV PDF, Google Scholar.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
+          </article>
+        </div>
 
-          <div class="code-panel" aria-label="CV summary placeholder">
-            <pre><span class="accent">const</span> cv = {
-  name: "여기에 이름",
-  affiliation: "학교 / 연구실 / 소속",
-  focus: ["관심 분야 1", "관심 분야 2"],
-  skills: ["기술 스택", "언어", "도구"],
-  lookingFor: "인턴 / 연구 / 프로젝트 / 협업"
+        <div class="code-panel" style="margin-top: 24px;" aria-label="CV summary placeholder">
+          <pre><span class="accent">const</span> cv = {
+  name: "JoonSeo Chang",
+  affiliation: "Affiliation section",
+  focus: ["Interest section", "Course section"],
+  links: ["GitHub", "Email", "CV PDF"],
+  status: "Replace placeholders with real CV content"
 };</pre>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section dark-band" id="courses">
+    <section class="section" id="courses">
       <div class="container">
         <div class="section-head">
-          <p class="mono eyebrow">Courses</p>
-          <h2>수강 과목(course) 섹션은 어두운 카드 그리드에 넣습니다.</h2>
-          <p>
-            과목 목록은 길어질 수 있으므로 네 개의 묶음으로 나누면 읽기 쉽습니다.
-            각 카드 안의 빈 영역에 과목명, 학기, 주요 프로젝트를 넣으면 됩니다.
-          </p>
+          <p class="eyebrow">Courses</p>
+          <h2 class="display">Course section layout.</h2>
+          <p>Use these cards to group coursework by area, then fill each empty slot with course names later.</p>
         </div>
 
-        <div class="research-grid">
-          <article class="research-card">
-            <p class="mono eyebrow">Core CS</p>
-            <h3>전공 핵심 과목</h3>
-            <p>자료구조, 알고리즘, 운영체제, 컴퓨터구조 같은 핵심 과목.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+        <div class="card-grid">
+          <article class="card">
+            <div>
+              <p class="eyebrow">Core CS</p>
+              <h3>Core computer science</h3>
+              <p>Algorithms, operating systems, architecture, databases.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
-          <article class="research-card">
-            <p class="mono eyebrow">AI / Data</p>
-            <h3>AI와 데이터 과목</h3>
-            <p>머신러닝, 딥러닝, 데이터마이닝, NLP, 컴퓨터비전 등.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+          <article class="card">
+            <div>
+              <p class="eyebrow">AI / Data</p>
+              <h3>AI and data courses</h3>
+              <p>Machine learning, deep learning, NLP, vision, data mining.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
-          <article class="research-card">
-            <p class="mono eyebrow">Math / Theory</p>
-            <h3>수학과 이론 과목</h3>
-            <p>선형대수, 확률, 통계, 최적화, 이산수학 등을 넣는 자리.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
-          </article>
-          <article class="research-card">
-            <p class="mono eyebrow">Selected</p>
-            <h3>기타 주요 수강 과목</h3>
-            <p>강조하고 싶은 교양, 세미나, 온라인 코스, 연구 과목.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+          <article class="card">
+            <div>
+              <p class="eyebrow">Math / Theory</p>
+              <h3>Math and theory courses</h3>
+              <p>Linear algebra, probability, statistics, optimization.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="activities">
+    <section class="section cream" id="projects">
       <div class="container">
         <div class="section-head">
-          <p class="mono eyebrow">Projects / Activities</p>
-          <h2>개인 프로젝트, 대회, 콘텐츠, 취미는 이 흰색 섹션에 모읍니다.</h2>
-          <p>
-            CV에서 가장 자주 업데이트되는 항목입니다. 카드에는 대표 사례를 넣고,
-            아래 표에는 더 긴 활동 목록을 정리하는 방식으로 쓰면 됩니다.
-          </p>
+          <p class="eyebrow">Projects / Activities</p>
+          <h2 class="display">Projects, competitions, content, and hobbies.</h2>
+          <p>This is the expandable CV body. Keep cards for highlighted items and the table for longer lists.</p>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card">
-            <p class="mono eyebrow">Personal Project</p>
-            <h3>개인 프로젝트 섹션</h3>
-            <p>프로젝트 이름, 역할, 사용 기술, 데모/깃허브 링크를 넣는 자리.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+        <div class="card-grid two">
+          <article class="card">
+            <div>
+              <p class="eyebrow">Personal Project</p>
+              <h3>Personal projects section</h3>
+              <p>Project name, role, stack, repository, demo.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
-          <article class="work-card">
-            <p class="mono eyebrow">Competition</p>
-            <h3>대회와 수상 섹션</h3>
-            <p>대회명, 순위, 날짜, 팀 역할, 결과 링크를 넣는 자리.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+          <article class="card">
+            <div>
+              <p class="eyebrow">Competition</p>
+              <h3>Competition section</h3>
+              <p>Contest name, placement, team role, result link.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
-          <article class="work-card">
-            <p class="mono eyebrow">Content</p>
-            <h3>콘텐츠와 글 섹션</h3>
-            <p>블로그 글, 발표 자료, 튜토리얼, 문서화 작업을 넣는 자리.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+          <article class="card">
+            <div>
+              <p class="eyebrow">Content</p>
+              <h3>Content section</h3>
+              <p>Blog posts, presentations, tutorials, documentation.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
-          <article class="work-card">
-            <p class="mono eyebrow">Hobbies</p>
-            <h3>취미와 개인 관심사 섹션</h3>
-            <p>사람이 보이는 CV를 위해 취미, 커뮤니티, 사이드 활동을 넣는 자리.</p>
-            <div class="empty-slot" aria-hidden="true"></div>
+          <article class="card">
+            <div>
+              <p class="eyebrow">Hobbies</p>
+              <h3>Hobbies section</h3>
+              <p>Personal interests, communities, side activities.</p>
+            </div>
+            <div class="slot" aria-hidden="true"></div>
           </article>
         </div>
 
-        <div class="table-card" style="margin-top: 32px;">
-          <div class="table-row header mono">
+        <div class="timeline" style="margin-top: 28px;">
+          <div class="row header">
             <span>Section</span>
             <span>Use this space for</span>
             <span>Placement</span>
           </div>
-          <div class="table-row">
+          <div class="row">
             <strong>Experience / Research</strong>
-            <span>인턴, 연구실, 조교, 업무 경험</span>
-            <span>필요하면 이 표 아래에 새 카드로 확장</span>
+            <span>Internships, labs, assistantships, research work.</span>
+            <span>Expandable rows</span>
           </div>
-          <div class="table-row">
+          <div class="row">
             <strong>Awards / Competition</strong>
-            <span>대회, 수상, 장학금, 인증</span>
-            <span>Competition 카드 또는 표 행</span>
+            <span>Prizes, scholarships, certificates, rankings.</span>
+            <span>Card or row</span>
           </div>
-          <div class="table-row">
+          <div class="row">
             <strong>Content / Hobbies</strong>
-            <span>글, 발표, 취미, 커뮤니티 활동</span>
-            <span>하단 카드 영역</span>
+            <span>Writing, talks, community work, personal activities.</span>
+            <span>Lower cards</span>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="sunset-stripe" aria-hidden="true"></div>
+
   <footer class="footer" id="contact">
-    <div class="container footer-grid">
-      <div>
-        <p class="mono eyebrow">Contact</p>
-        <h2>연락처 섹션은 마지막에 고정합니다.</h2>
-        <p>email, GitHub, LinkedIn, CV PDF, Google Scholar 같은 외부 링크를 넣는 자리.</p>
-        <a class="button primary" href="https://github.com/cjswls79">GitHub</a>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 class="display">Contact section.</h2>
+          <p>Email, GitHub, LinkedIn, CV PDF, Google Scholar, or other external links.</p>
+          <a class="button primary" href="https://github.com/cjswls79">GitHub</a>
+        </div>
+        <div class="footer-links">
+          <p class="eyebrow">Sections</p>
+          <a href="#profile">Profile</a>
+          <a href="#courses">Courses</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div class="footer-links">
+          <p class="eyebrow">CV Links</p>
+          <a href="#">Email placeholder</a>
+          <a href="#">LinkedIn placeholder</a>
+          <a href="#">CV PDF placeholder</a>
+        </div>
+        <div class="footer-links">
+          <p class="eyebrow">Source</p>
+          <a href="https://github.com/cjswls79/cjswls79.github.io">Repository</a>
+          <a href="#top">Back to top</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <p class="mono eyebrow">Sections</p>
-        <a href="#profile">Profile</a>
-        <a href="#courses">Courses</a>
-        <a href="#activities">Projects</a>
-      </div>
-      <div class="footer-links">
-        <p class="mono eyebrow">CV Links</p>
-        <a href="#">Email placeholder</a>
-        <a href="#">LinkedIn placeholder</a>
-        <a href="#">CV PDF placeholder</a>
-      </div>
-      <div class="footer-links">
-        <p class="mono eyebrow">Source</p>
-        <a href="https://github.com/cjswls79/cjswls79.github.io">Repository</a>
-        <a href="#top">Back to top</a>
+      <div class="footer-bottom">
+        <span>JoonSeo Chang</span>
+        <span>CV content placeholders ready to replace.</span>
       </div>
     </div>
-    <div class="wordmark" aria-hidden="true">cjswls79.github.io</div>
   </footer>
 
   <script>
