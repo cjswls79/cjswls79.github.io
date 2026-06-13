@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JoonSeo Chang | CV</title>
+  <title>JoonSeo Chang | 이력서</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #ff5a1f;
@@ -38,7 +41,7 @@
       margin: 0;
       background: var(--canvas);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Noto Sans KR", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 16px;
       line-height: 1.55;
     }
@@ -54,9 +57,9 @@
     }
 
     .display {
-      font-family: "Times New Roman", Georgia, serif;
-      font-weight: 400;
-      letter-spacing: -1px;
+      font-family: "Noto Serif KR", "Times New Roman", Georgia, serif;
+      font-weight: 500;
+      letter-spacing: 0;
     }
 
     .eyebrow {
@@ -122,7 +125,7 @@
       border-radius: 6px;
       background: var(--ink);
       color: var(--cream);
-      font-family: "Times New Roman", Georgia, serif;
+      font-family: "Noto Serif KR", "Times New Roman", Georgia, serif;
       font-size: 20px;
       line-height: 1;
     }
@@ -254,13 +257,13 @@
       max-width: 760px;
       margin-bottom: 24px;
       color: var(--ink);
-      font-size: clamp(58px, 7vw, 96px);
+      font-size: 76px;
       line-height: 1.02;
     }
 
     h2 {
       margin-bottom: 18px;
-      font-size: clamp(40px, 5vw, 66px);
+      font-size: 60px;
       line-height: 1.08;
     }
 
@@ -512,15 +515,23 @@
       .row {
         grid-template-columns: 1fr;
       }
+
+      h1 {
+        font-size: 64px;
+      }
+
+      h2 {
+        font-size: 48px;
+      }
     }
 
     @media (max-width: 560px) {
       h1 {
-        font-size: 48px;
+        font-size: 42px;
       }
 
       h2 {
-        font-size: 38px;
+        font-size: 34px;
       }
 
       .section {
@@ -550,8 +561,8 @@
 <body>
   <div class="promo">
     <div class="container promo-inner">
-      <span>Personal CV template for JoonSeo Chang</span>
-      <a href="#contact">Contact section</a>
+      <span>JoonSeo Chang의 개인 이력서 템플릿</span>
+      <a href="#contact">연락처 섹션</a>
     </div>
   </div>
 
@@ -562,46 +573,46 @@
         <span>JoonSeo Chang</span>
       </a>
       <div class="nav-links" aria-label="Sections">
-        <a href="#profile">Profile</a>
-        <a href="#courses">Courses</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#profile">소개</a>
+        <a href="#courses">수강 과목</a>
+        <a href="#hobbies">취미</a>
+        <a href="#contact">연락처</a>
       </div>
       <div class="nav-actions">
         <a class="button secondary" href="https://github.com/cjswls79">GitHub</a>
-        <a class="button dark" href="#contact">Contact</a>
+        <a class="button dark" href="#contact">연락처</a>
       </div>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
         <span aria-hidden="true"></span>
       </button>
     </div>
     <div class="container mobile-drawer">
-      <a href="#profile">Profile</a>
-      <a href="#courses">Courses</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#profile">소개</a>
+      <a href="#courses">수강 과목</a>
+      <a href="#hobbies">취미</a>
+      <a href="#contact">연락처</a>
     </div>
   </nav>
 
   <header class="hero" id="top">
     <div class="container hero-main">
       <div>
-        <p class="eyebrow">Name section</p>
+        <p class="eyebrow">이름 섹션</p>
         <h1 class="display">JoonSeo Chang</h1>
         <p class="lead">
-          One-line introduction placeholder. Use this area for affiliation,
-          major, research interests, and the shortest version of the CV story.
+          한 줄 소개를 넣는 자리입니다. 소속, 전공, 관심 분야,
+          그리고 이력서 전체를 가장 짧게 설명하는 문장을 배치하면 됩니다.
         </p>
         <div class="hero-actions">
-          <a class="button dark" href="#projects">Projects</a>
-          <a class="button secondary" href="#profile">Profile</a>
+          <a class="button dark" href="#hobbies">취미</a>
+          <a class="button secondary" href="#profile">소개</a>
         </div>
       </div>
 
       <figure class="photo-card">
         <img src="intro-photo.jpg" alt="Intro photo for JoonSeo Chang">
         <figcaption class="photo-caption">
-          Intro photo slot. Replace or crop this image later if a formal portrait is preferred.
+          소개 사진 자리입니다. 더 공식적인 사진을 쓰고 싶으면 나중에 교체하거나 크롭하면 됩니다.
         </figcaption>
       </figure>
     </div>
@@ -611,33 +622,33 @@
     <section class="section cream" id="profile">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Profile / Education</p>
-          <h2 class="display">Where basic CV identity goes.</h2>
-          <p>Keep this band for the most stable information: education, interests, links, and a compact summary.</p>
+          <p class="eyebrow">소개 / 학력</p>
+          <h2 class="display">기본 이력 정보를 넣는 공간입니다.</h2>
+          <p>학력, 관심 분야, 주요 링크, 짧은 요약처럼 가장 안정적으로 유지되는 정보를 이 영역에 넣으면 됩니다.</p>
         </div>
 
         <div class="card-grid">
           <article class="card cream">
             <div>
-              <p class="eyebrow">Education</p>
-              <h3>Education section</h3>
-              <p>School, degree, major, dates.</p>
+              <p class="eyebrow">학력</p>
+              <h3>학력 섹션</h3>
+              <p>학교, 학위 과정, 전공, 재학 기간.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card cream">
             <div>
-              <p class="eyebrow">Interests</p>
-              <h3>Research interests section</h3>
-              <p>AI, systems, data, security, theory, or other focus areas.</p>
+              <p class="eyebrow">관심 분야</p>
+              <h3>연구 및 개발 관심 분야</h3>
+              <p>AI, 시스템, 데이터, 보안, 이론 등 집중하고 싶은 분야.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card cream">
             <div>
-              <p class="eyebrow">Links</p>
-              <h3>Primary links section</h3>
-              <p>GitHub, LinkedIn, email, CV PDF, Google Scholar.</p>
+              <p class="eyebrow">링크</p>
+              <h3>주요 링크 섹션</h3>
+              <p>GitHub, LinkedIn, 이메일, 이력서 PDF, Google Scholar.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
@@ -646,10 +657,10 @@
         <div class="code-panel" style="margin-top: 24px;" aria-label="CV summary placeholder">
           <pre><span class="accent">const</span> cv = {
   name: "JoonSeo Chang",
-  affiliation: "Affiliation section",
-  focus: ["Interest section", "Course section"],
-  links: ["GitHub", "Email", "CV PDF"],
-  status: "Replace placeholders with real CV content"
+  affiliation: "소속을 넣는 자리",
+  focus: ["관심 분야", "수강 과목"],
+  links: ["GitHub", "이메일", "이력서 PDF"],
+  status: "빈칸을 실제 이력서 내용으로 교체"
 };</pre>
         </div>
       </div>
@@ -658,33 +669,33 @@
     <section class="section" id="courses">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Courses</p>
-          <h2 class="display">Course section layout.</h2>
-          <p>Use these cards to group coursework by area, then fill each empty slot with course names later.</p>
+          <p class="eyebrow">수강 과목</p>
+          <h2 class="display">수강 과목을 분야별로 정리하는 공간입니다.</h2>
+          <p>과목을 영역별로 묶어 두고, 각 빈칸에는 나중에 실제 과목명과 학기, 과제나 프로젝트를 넣으면 됩니다.</p>
         </div>
 
         <div class="card-grid">
           <article class="card">
             <div>
-              <p class="eyebrow">Core CS</p>
-              <h3>Core computer science</h3>
-              <p>Algorithms, operating systems, architecture, databases.</p>
+              <p class="eyebrow">전공 핵심</p>
+              <h3>컴퓨터공학 핵심 과목</h3>
+              <p>알고리즘, 운영체제, 컴퓨터구조, 데이터베이스.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card">
             <div>
-              <p class="eyebrow">AI / Data</p>
-              <h3>AI and data courses</h3>
-              <p>Machine learning, deep learning, NLP, vision, data mining.</p>
+              <p class="eyebrow">AI / 데이터</p>
+              <h3>AI와 데이터 과목</h3>
+              <p>머신러닝, 딥러닝, NLP, 컴퓨터비전, 데이터마이닝.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card">
             <div>
-              <p class="eyebrow">Math / Theory</p>
-              <h3>Math and theory courses</h3>
-              <p>Linear algebra, probability, statistics, optimization.</p>
+              <p class="eyebrow">수학 / 이론</p>
+              <h3>수학과 이론 과목</h3>
+              <p>선형대수, 확률, 통계, 최적화.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
@@ -692,44 +703,44 @@
       </div>
     </section>
 
-    <section class="section cream" id="projects">
+    <section class="section cream" id="hobbies">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Projects / Activities</p>
-          <h2 class="display">Projects, competitions, content, and hobbies.</h2>
-          <p>This is the expandable CV body. Keep cards for highlighted items and the table for longer lists.</p>
+          <p class="eyebrow">취미 / 관심사</p>
+          <h2 class="display">취미를 조금 더 자세히 보여주는 공간입니다.</h2>
+          <p>이 영역은 사람의 결을 보여주는 개인 섹션입니다. 취미, 기록 습관, 좋아하는 활동, 꾸준히 하는 사이드 활동을 넉넉하게 적을 수 있게 구성했습니다.</p>
         </div>
 
         <div class="card-grid two">
           <article class="card">
             <div>
-              <p class="eyebrow">Personal Project</p>
-              <h3>Personal projects section</h3>
-              <p>Project name, role, stack, repository, demo.</p>
+              <p class="eyebrow">독서 / 학습</p>
+              <h3>읽고 배우는 취미</h3>
+              <p>즐겨 읽는 분야, 최근 읽은 책, 꾸준히 공부하는 주제.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card">
             <div>
-              <p class="eyebrow">Competition</p>
-              <h3>Competition section</h3>
-              <p>Contest name, placement, team role, result link.</p>
+              <p class="eyebrow">기록 / 콘텐츠</p>
+              <h3>기록하고 만드는 활동</h3>
+              <p>블로그, 발표 자료, 노트 정리, 튜토리얼, 문서화 습관.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card">
             <div>
-              <p class="eyebrow">Content</p>
-              <h3>Content section</h3>
-              <p>Blog posts, presentations, tutorials, documentation.</p>
+              <p class="eyebrow">활동 / 운동</p>
+              <h3>몸을 움직이는 취미</h3>
+              <p>운동, 산책, 여행, 일상 루틴처럼 지속적으로 하는 활동.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
           <article class="card">
             <div>
-              <p class="eyebrow">Hobbies</p>
-              <h3>Hobbies section</h3>
-              <p>Personal interests, communities, side activities.</p>
+              <p class="eyebrow">커뮤니티 / 사이드</p>
+              <h3>사람들과 함께하는 취미</h3>
+              <p>동아리, 커뮤니티, 사이드 프로젝트, 봉사나 협업 활동.</p>
             </div>
             <div class="slot" aria-hidden="true"></div>
           </article>
@@ -737,24 +748,29 @@
 
         <div class="timeline" style="margin-top: 28px;">
           <div class="row header">
-            <span>Section</span>
-            <span>Use this space for</span>
-            <span>Placement</span>
+            <span>취미 항목</span>
+            <span>여기에 쓸 내용</span>
+            <span>배치 방식</span>
           </div>
           <div class="row">
-            <strong>Experience / Research</strong>
-            <span>Internships, labs, assistantships, research work.</span>
-            <span>Expandable rows</span>
+            <strong>요즘 가장 많이 하는 취미</strong>
+            <span>현재 가장 자주 하는 활동, 빈도, 왜 좋아하는지.</span>
+            <span>짧은 문단</span>
           </div>
           <div class="row">
-            <strong>Awards / Competition</strong>
-            <span>Prizes, scholarships, certificates, rankings.</span>
-            <span>Card or row</span>
+            <strong>오래 유지한 취미</strong>
+            <span>오랫동안 해 온 활동, 시작 계기, 쌓인 결과물.</span>
+            <span>연표 또는 목록</span>
           </div>
           <div class="row">
-            <strong>Content / Hobbies</strong>
-            <span>Writing, talks, community work, personal activities.</span>
-            <span>Lower cards</span>
+            <strong>보여줄 수 있는 결과물</strong>
+            <span>글 링크, 사진, 발표 자료, 기록물, 외부 페이지.</span>
+            <span>링크 모음</span>
+          </div>
+          <div class="row">
+            <strong>개인적인 취향</strong>
+            <span>좋아하는 책, 음악, 장소, 루틴, 도구 같은 가벼운 정보.</span>
+            <span>키워드 묶음</span>
           </div>
         </div>
       </div>
@@ -767,32 +783,32 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2 class="display">Contact section.</h2>
-          <p>Email, GitHub, LinkedIn, CV PDF, Google Scholar, or other external links.</p>
+          <p class="eyebrow">연락처</p>
+          <h2 class="display">연락처 섹션입니다.</h2>
+          <p>이메일, GitHub, LinkedIn, 이력서 PDF, Google Scholar 같은 외부 링크를 넣는 자리입니다.</p>
           <a class="button primary" href="https://github.com/cjswls79">GitHub</a>
         </div>
         <div class="footer-links">
-          <p class="eyebrow">Sections</p>
-          <a href="#profile">Profile</a>
-          <a href="#courses">Courses</a>
-          <a href="#projects">Projects</a>
+          <p class="eyebrow">섹션</p>
+          <a href="#profile">소개</a>
+          <a href="#courses">수강 과목</a>
+          <a href="#hobbies">취미</a>
         </div>
         <div class="footer-links">
-          <p class="eyebrow">CV Links</p>
-          <a href="#">Email placeholder</a>
-          <a href="#">LinkedIn placeholder</a>
-          <a href="#">CV PDF placeholder</a>
+          <p class="eyebrow">이력서 링크</p>
+          <a href="#">이메일 자리</a>
+          <a href="#">LinkedIn 자리</a>
+          <a href="#">이력서 PDF 자리</a>
         </div>
         <div class="footer-links">
-          <p class="eyebrow">Source</p>
-          <a href="https://github.com/cjswls79/cjswls79.github.io">Repository</a>
-          <a href="#top">Back to top</a>
+          <p class="eyebrow">소스</p>
+          <a href="https://github.com/cjswls79/cjswls79.github.io">저장소</a>
+          <a href="#top">맨 위로</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span>JoonSeo Chang</span>
-        <span>CV content placeholders ready to replace.</span>
+        <span>실제 이력서 내용으로 교체할 수 있는 자리입니다.</span>
       </div>
     </div>
   </footer>
