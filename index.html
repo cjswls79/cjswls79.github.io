@@ -329,17 +329,33 @@
 
     .game-images {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
+    }
+
+    .game-images.single {
+      grid-template-columns: 1fr;
+    }
+
+    .game-images.eternal-return {
+      grid-template-columns: minmax(0, 1.08fr) minmax(210px, 0.62fr);
+      align-items: start;
+    }
+
+    .game-images.lost-ark {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+    }
+
+    .game-images .wide {
+      grid-column: 1 / -1;
     }
 
     .game-images img {
       width: 100%;
-      height: 240px;
+      height: auto;
       display: block;
       border: 1px solid var(--line);
       border-radius: 8px;
-      object-fit: contain;
       background: var(--paper);
     }
 
@@ -445,10 +461,6 @@
 
       .game-images {
         grid-template-columns: 1fr;
-      }
-
-      .game-images img {
-        height: 240px;
       }
 
       .footer-inner {
@@ -583,7 +595,7 @@
                   <span>Overwatch</span>
                   <span>FPS</span>
                 </div>
-                <div class="game-images">
+                <div class="game-images single">
                   <img src="assets/overwatch.png" alt="Overwatch introduction image">
                 </div>
               </div>
@@ -592,7 +604,7 @@
                   <span>Eternal Return</span>
                   <span>Strategy</span>
                 </div>
-                <div class="game-images">
+                <div class="game-images eternal-return">
                   <img src="assets/eternal-return-1.png" alt="Eternal Return introduction image 1">
                   <img src="assets/eternal-return-2.png" alt="Eternal Return introduction image 2">
                 </div>
@@ -602,11 +614,11 @@
                   <span>Lost Ark</span>
                   <span>RPG</span>
                 </div>
-                <div class="game-images">
+                <div class="game-images lost-ark">
                   <img src="assets/lostark-1.png" alt="Lost Ark introduction image 1">
-                  <img src="assets/lostark-2.png" alt="Lost Ark introduction image 2">
-                  <img src="assets/lostark-3.png" alt="Lost Ark introduction image 3">
                   <img src="assets/lostark-4.png" alt="Lost Ark introduction image 4">
+                  <img class="wide" src="assets/lostark-2.png" alt="Lost Ark introduction image 2">
+                  <img class="wide" src="assets/lostark-3.png" alt="Lost Ark introduction image 3">
                 </div>
               </div>
             </div>
