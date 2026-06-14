@@ -289,25 +289,28 @@
 
     .interest-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
+    }
+
+    .games-panel {
+      grid-column: 1 / -1;
     }
 
     .game-list {
       display: grid;
-      gap: 10px;
+      gap: 18px;
       margin-top: 0;
     }
 
     .game {
-      display: flex;
-      min-height: 82px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      align-items: stretch;
+      gap: 18px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 12px 14px;
+      padding: 18px;
       background: var(--white);
       font-weight: 800;
     }
@@ -325,14 +328,14 @@
     }
 
     .game-images {
-      display: flex;
-      justify-content: flex-end;
-      gap: 6px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
     }
 
     .game-images img {
-      width: 54px;
-      height: 54px;
+      width: 100%;
+      height: 210px;
       display: block;
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -389,6 +392,10 @@
         grid-template-columns: 1fr;
       }
 
+      .games-panel {
+        grid-column: auto;
+      }
+
       .hero-inner {
         min-height: auto;
         grid-template-columns: 1fr;
@@ -433,13 +440,15 @@
       }
 
       .game {
-        align-items: flex-start;
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
 
       .game-images {
-        width: 100%;
-        justify-content: flex-start;
+        grid-template-columns: 1fr;
+      }
+
+      .game-images img {
+        height: 220px;
       }
 
       .footer-inner {
@@ -555,7 +564,18 @@
             </ul>
           </article>
 
-          <article class="panel accent-orange">
+          <article class="panel accent-green">
+            <h3>Music</h3>
+            <div class="chips" aria-label="Music genres">
+              <span class="chip">Jazz</span>
+              <span class="chip">New Age</span>
+              <span class="chip">House</span>
+              <span class="chip">lo-fi</span>
+              <span class="chip">VGM</span>
+            </div>
+          </article>
+
+          <article class="panel accent-orange games-panel">
             <h3>Games</h3>
             <div class="game-list">
               <div class="game">
@@ -589,17 +609,6 @@
                   <img src="assets/lostark-4.png" alt="Lost Ark introduction image 4">
                 </div>
               </div>
-            </div>
-          </article>
-
-          <article class="panel accent-green">
-            <h3>Music</h3>
-            <div class="chips" aria-label="Music genres">
-              <span class="chip">Jazz</span>
-              <span class="chip">New Age</span>
-              <span class="chip">House</span>
-              <span class="chip">lo-fi</span>
-              <span class="chip">VGM</span>
             </div>
           </article>
         </div>
